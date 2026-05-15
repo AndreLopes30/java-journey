@@ -2,15 +2,14 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        
+        new Alunos(nome="André", nota=6);
     }
 }
 
-public class Alunos {
+class Alunos {
     String nome;
     double nota;
-    public static String alunos() {
-        public static void situacao() {
+        public String situacao() {
             if (nota >= 6) {
                 return "Aprovado";
             }
@@ -19,4 +18,3 @@ public class Alunos {
             }
         }
     }
-}
