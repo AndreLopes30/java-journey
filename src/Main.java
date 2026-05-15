@@ -2,7 +2,10 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        new Alunos(nome="André", nota=6);
+        Alunos alunoNovo = new Alunos();
+        alunoNovo.nota = 6;
+        alunoNovo.nome = "André";
+        System.out.println(alunoNovo.nome, alunoNovo.situacao());
     }
 }
 
