@@ -2,6 +2,21 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        
+    }
+}
 
+public class Alunos {
+    String nome;
+    double nota;
+    public static String alunos() {
+        public static void situacao() {
+            if (nota >= 6) {
+                return "Aprovado";
+            }
+            else {
+                return "Reprovado";
+            }
+        }
     }
 }
