@@ -16,7 +16,6 @@ class Main {
         alunoNovo3.nome = "Lopes";
         listaAlunos.add(alunoNovo3);
         for(AlunosEx2 aluno : listaAlunos) {
-            listaAlunos.add(aluno);
             System.out.println(aluno.nome + " - " + aluno.situacao());
         }
     }
