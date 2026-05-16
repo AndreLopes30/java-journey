@@ -1,3 +1,9 @@
+/* Exercício 2 — ArrayList e For-Each
+ * Evolução do exercício anterior: em vez de variáveis soltas,
+ * os objetos Aluno são armazenados em uma lista e percorridos
+ * com for-each, praticando coleções e iteração em Java.
+ */
+
 package exercicio2;
 
 import java.util.ArrayList;
