@@ -5,24 +5,24 @@
  * praticando instanciação de objetos e orientação a objetos básica em Java.
  */
 
-public class Main {
+public class MainEx1 {
     public static void main(String[] args) {
-        Alunos alunoNovo = new Alunos();
+        AlunosEx2 alunoNovo = new AlunosEx2();
         alunoNovo.nota = 6;
         alunoNovo.nome = "André";
         System.out.println(alunoNovo.nome + " - " + alunoNovo.situacao());
-        Alunos alunoNovo2 = new Alunos();
-        alunoNovo2.nota = 4;
-        alunoNovo2.nome = "Ferreira";
-        System.out.println(alunoNovo2.nome + " - " + alunoNovo2.situacao());
-        Alunos alunoNovo3 = new Alunos();
+        AlunosEx1 alunoNovo1 = new AlunosEx1();
+        alunoNovo1.nota = 4;
+        alunoNovo1.nome = "Ferreira";
+        System.out.println(alunoNovo1.nome + " - " + alunoNovo1.situacao());
+        AlunosEx1 alunoNovo3 = new AlunosEx1();
         alunoNovo3.nota = 8;
         alunoNovo3.nome = "Lopes";
         System.out.println(alunoNovo3.nome + " - " + alunoNovo3.situacao());
     }
 }
 
-class Alunos {
+class AlunosEx1 {
     String nome;
     double nota;
         public String situacao() {

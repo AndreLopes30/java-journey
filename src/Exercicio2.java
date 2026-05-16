@@ -1,25 +1,28 @@
 import java.util.ArrayList;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
-        List<Alunos> listaAlunos = new ArrayList<>();
-        Alunos alunoNovo = new Alunos();
+        ArrayList<AlunosEx2> listaAlunos = new ArrayList<>();
+        AlunosEx2 alunoNovo = new AlunosEx2();
         alunoNovo.nota = 6;
         alunoNovo.nome = "André";
-        Alunos alunoNovo2 = new Alunos();
+        listaAlunos.add(alunoNovo);
+        AlunosEx2 alunoNovo2 = new AlunosEx2();
         alunoNovo2.nota = 4;
         alunoNovo2.nome = "Ferreira";
-        Alunos alunoNovo3 = new Alunos();
+        listaAlunos.add(alunoNovo2);
+        AlunosEx2 alunoNovo3 = new AlunosEx2();
         alunoNovo3.nota = 8;
         alunoNovo3.nome = "Lopes";
-        for(Alunos aluno : listaAlunos) {
+        listaAlunos.add(alunoNovo3);
+        for(AlunosEx2 aluno : listaAlunos) {
             listaAlunos.add(aluno);
             System.out.println(aluno.nome + " - " + aluno.situacao());
         }
     }
 }
 
-class Alunos {
+class AlunosEx2 {
     String nome;
     double nota;
     public String situacao() {
