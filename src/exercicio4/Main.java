@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 class Main {
     public static void main(String[] args) {
+        AlunoBolsista bolsita1 = new AlunoBolsista("André", 10, 90);
         ArrayList<Alunos> listaAlunos = new ArrayList<>();
         Alunos alunoNovo = new Alunos("André", 6);
         listaAlunos.add(alunoNovo);
@@ -37,8 +38,18 @@ class Alunos {
 
 class AlunoBolsista extends Alunos {
     double bolsa;
-    super.situacao();
-    if(Alunos.nota > 6) {
-        return "Aprovado"+" - Bolsa: R$ " + bolsa;
+    public AlunoBolsista(bolsa) {
+        super(nome,nota);
+        this.bolsa = bolsa;
+    }
+
+    @Override
+    public String situacao() {
+        if (nota >= 6) {
+            return "Aprovado"+" - Bolsa: R$ " + bolsa;
+        }
+        else {
+            return "Reprovado";
+        }
     }
 }
