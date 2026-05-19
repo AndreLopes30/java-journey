@@ -1,10 +1,5 @@
-/* Exercício 3 — Construtor
- * Evolução do exercício anterior: em vez de atribuir nome e nota
- * linha por linha, a classe Alunos passou a ter um construtor
- * que recebe os valores diretamente na instanciação com new.
- */
 
-package exercicio3;
+package exercicio4;
 
 import java.util.ArrayList;
 
