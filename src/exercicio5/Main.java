@@ -1,3 +1,8 @@
+/* Exercício 5 — Encapsulamento
+ * Aplicação do princípio de encapsulamento: atributos nome e nota
+ * tornados privados e acessados apenas via getters e setters.
+ * Praticando private, getNome(), getNota(), setNome() e setNota() em Java.
+ */
 
 package exercicio5;
 
@@ -6,16 +11,16 @@ import java.util.ArrayList;
 class Main {
     public static void main(String[] args) {
         ArrayList<Alunos> listaAlunos = new ArrayList<>();
-        AlunoBolsista bolsita1 = new AlunoBolsista(setNome("André"), setNota(10), 90);
+        AlunoBolsista bolsita1 = new AlunoBolsista("André", 10, 90);
         listaAlunos.add(bolsita1);
-        Alunos alunoNovo = new Alunos(setNome("André"), setNota(6));
+        Alunos alunoNovo = new Alunos("André", 6);
         listaAlunos.add(alunoNovo);
-        Alunos alunoNovo2 = new Alunos(setNome("Ferreira"), setNota(4));
+        Alunos alunoNovo2 = new Alunos("Ferreira", 4);
         listaAlunos.add(alunoNovo2);
-        Alunos alunoNovo3 = new Alunos(setNome("Lopes"), setNota(8));
+        Alunos alunoNovo3 = new Alunos("Lopes", 8);
         listaAlunos.add(alunoNovo3);
         for(Alunos aluno : listaAlunos) {
-            System.out.println(aluno.nome + " - " + aluno.situacao());
+            System.out.println(aluno.getNome() + " - " + aluno.situacao());
         }
     }
 }
@@ -41,10 +46,10 @@ class Alunos {
     public double getNota() {
         return this.nota;
     }
-    public String setNome(String novoNome) {
+    public void setNome(String novoNome) {
             this.nome = novoNome;
     }
-    public double setNota(double novaNota) {
+    public void setNota(double novaNota) {
         this.nota = novaNota;
     }
 
@@ -59,7 +64,7 @@ class AlunoBolsista extends Alunos {
 
     @Override
     public String situacao() {
-        if (nota >= 6) {
+        if (getNota() >= 6) {
             return "Aprovado"+" - Bolsa: R$ " + bolsa;
         }
         else {
