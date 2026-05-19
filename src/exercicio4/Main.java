@@ -6,6 +6,7 @@ import java.util.ArrayList;
 class Main {
     public static void main(String[] args) {
         AlunoBolsista bolsita1 = new AlunoBolsista("André", 10, 90);
+        listaAlunos.add(bolsita1);
         ArrayList<Alunos> listaAlunos = new ArrayList<>();
         Alunos alunoNovo = new Alunos("André", 6);
         listaAlunos.add(alunoNovo);
@@ -38,7 +39,7 @@ class Alunos {
 
 class AlunoBolsista extends Alunos {
     double bolsa;
-    public AlunoBolsista(bolsa) {
+    public AlunoBolsista(super(nome, nota), double bolsa) {
         super(nome,nota);
         this.bolsa = bolsa;
     }
