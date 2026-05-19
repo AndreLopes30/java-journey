@@ -1,3 +1,9 @@
+/* Exercício 4 — Herança e Polimorfismo
+ * Extensão do sistema de alunos com uma classe AlunoBolsista
+ * que herda de Alunos, adiciona o atributo bolsa e sobrescreve
+ * o método situacao() para exibir informações adicionais.
+ * Praticando extends, super, @Override e polimorfismo em Java.
+ */
 
 package exercicio4;
 
@@ -5,9 +11,9 @@ import java.util.ArrayList;
 
 class Main {
     public static void main(String[] args) {
+        ArrayList<Alunos> listaAlunos = new ArrayList<>();
         AlunoBolsista bolsita1 = new AlunoBolsista("André", 10, 90);
         listaAlunos.add(bolsita1);
-        ArrayList<Alunos> listaAlunos = new ArrayList<>();
         Alunos alunoNovo = new Alunos("André", 6);
         listaAlunos.add(alunoNovo);
         Alunos alunoNovo2 = new Alunos("Ferreira", 4);
@@ -39,7 +45,7 @@ class Alunos {
 
 class AlunoBolsista extends Alunos {
     double bolsa;
-    public AlunoBolsista(super(nome, nota), double bolsa) {
+    public AlunoBolsista(String nome, double nota, double bolsa) {
         super(nome,nota);
         this.bolsa = bolsa;
     }
