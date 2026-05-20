@@ -3,7 +3,7 @@ package exercicio6;
 
 import java.util.ArrayList;
 
-class Main implements Relatorio{
+class Main {
     public static void main(String[] args) {
         ArrayList<Alunos> listaAlunos = new ArrayList<>();
         AlunoBolsista bolsita1 = new AlunoBolsista("André", 10, 90);
@@ -15,7 +15,7 @@ class Main implements Relatorio{
         Alunos alunoNovo3 = new Alunos("Lopes", 8);
         listaAlunos.add(alunoNovo3);
         for(Alunos aluno : listaAlunos) {
-            gerarRelatorio();
+            aluno.gerarRelatorio();
         }
     }
 }
@@ -49,7 +49,7 @@ class Alunos implements Relatorio {
     }
 
     @Override
-    public Alunos gerarRelatorio() {
+    public String gerarRelatorio() {
         return "Aluno:" + getNome() + "| Nota:" + getNota() + "| Situação:" + situacao() ;
     }
 
@@ -73,7 +73,7 @@ class AlunoBolsista extends Alunos implements Relatorio {
     }
 
     @Override
-    public Alunos gerarRelatorio() {
+    public String gerarRelatorio() {
         return "Aluno:" + getNome() + "| Nota:" + getNota() + "| Situação:" + situacao() + "- Bolsa: R$" + bolsa;
     }
 }
