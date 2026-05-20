@@ -13,14 +13,14 @@ class Main {
             listaAlunos.add(alunoNovo);
             Alunos alunoNovo2 = new Alunos("Ferreira", 4);
             listaAlunos.add(alunoNovo2);
-            Alunos alunoNovo3 = new Alunos("Lopes", 8);
+            Alunos alunoNovo3 = new Alunos("Lopes", 15);
             listaAlunos.add(alunoNovo3);
             for (Alunos aluno : listaAlunos) {
                 System.out.println(aluno.gerarRelatorio());
             }
         }
-        catch {
-            throw IllegalArgumentException("Nota inválida: deve ser entre 0 e 10");
+        catch(IllegalArgumentException) {
+            System.out.println("Nota inválida: deve ser entre 0 e 10");
         }
     }
 }
@@ -40,7 +40,7 @@ class Alunos implements Relatorio {
         this.nome = nome;
         this.nota = nota;
         if(nota < 0 || nota > 10) {
-            throw IllegalArgumentException("Nota inválida: deve ser entre 0 e 10");
+            throw new IllegalArgumentException("Nota inválida: deve ser entre 0 e 10");
         };
     }
     public String getNome() {
