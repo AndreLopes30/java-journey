@@ -1,3 +1,9 @@
+/* Exercício 6 — Interface
+ * Criação da interface Relatorio com o método gerarRelatorio(),
+ * implementada por Alunos e AlunoBolsista para padronizar
+ * a geração de relatórios de cada tipo de aluno.
+ * Praticando interface, implements e @Override em Java.
+ */
 
 package exercicio6;
 
@@ -15,7 +21,7 @@ class Main {
         Alunos alunoNovo3 = new Alunos("Lopes", 8);
         listaAlunos.add(alunoNovo3);
         for(Alunos aluno : listaAlunos) {
-            aluno.gerarRelatorio();
+            System.out.println(aluno.gerarRelatorio());
         }
     }
 }
