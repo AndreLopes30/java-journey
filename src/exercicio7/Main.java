@@ -1,3 +1,8 @@
+/* Exercício 7 — Exceções
+ * Adição de validação no construtor de Alunos com lançamento
+ * de IllegalArgumentException para notas fora do intervalo 0-10.
+ * Praticando throw, new, try/catch e tratamento de exceções em Java.
+ */
 
 package exercicio7;
 
@@ -19,7 +24,7 @@ class Main {
                 System.out.println(aluno.gerarRelatorio());
             }
         }
-        catch(IllegalArgumentException) {
+        catch(IllegalArgumentException e) {
             System.out.println("Nota inválida: deve ser entre 0 e 10");
         }
     }
