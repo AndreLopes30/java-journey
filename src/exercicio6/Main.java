@@ -1,8 +1,3 @@
-/* Exercício 5 — Encapsulamento
- * Aplicação do princípio de encapsulamento: atributos nome e nota
- * tornados privados e acessados apenas via getters e setters.
- * Praticando private, getNome(), getNota(), setNome() e setNota() em Java.
- */
 
 package exercicio6;
 
